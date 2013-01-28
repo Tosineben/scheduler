@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public class Program
     {

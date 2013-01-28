@@ -3,7 +3,7 @@ using System.Net;
 using System.Text;
 using System.Threading;
 
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public class Scheduler
     {

@@ -1,4 +1,4 @@
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public static class ParserConstants
     {

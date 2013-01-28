@@ -4,7 +4,7 @@ using System.Collections.Specialized;
 using System.Linq;
 using HtmlAgilityPack;
 
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public class SsolParser : IRegistrationParser
     {

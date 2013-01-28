@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Specialized;
 
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public interface IRegistrationParser
     {

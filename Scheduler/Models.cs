@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using HtmlAgilityPack;
 
-namespace Columbia.Scheduler
+namespace Scheduler
 {
     public class HtmlForm
     {
