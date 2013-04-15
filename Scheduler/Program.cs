@@ -6,20 +6,20 @@ namespace Scheduler
     {
         public static void Main(string[] args)
         {
-            const string callNumber = "16338";
-            const string uName = "usernamehere";
-            const string pWord = "passwordhere";
+            const string uName = "usernameHere";
+            const string pWord = "passwordHere";
 
             try
             {
-                new Scheduler().RegisterForClass(uName, pWord, callNumber);                
+                var s = new Scheduler();
+                s.RegisterForClass(uName, pWord, "75499");
             }
             catch(Exception e)
             {
-                Console.Write(e.Message);
+                e.Dump();
             }
 
-            Console.Write("Done!");
+            "Done!".Dump();
             Console.ReadKey();
         }
     }

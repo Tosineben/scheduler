@@ -134,6 +134,18 @@ namespace Scheduler
             return resp;
         }
 
+        public ResponseType ParseAddRequestResponse(string html)
+        {
+            if (html.Contains("No Registration Appointment"))
+            {
+                return ResponseType.NoRegistrationAppt;
+            }
+                
+            // TODO check for other errors here
+            
+            return ResponseType.Registered;
+        }
+
         public ResponseType GetNoneAvailResponseType(HtmlNode content)
         {
             HtmlNode reason;

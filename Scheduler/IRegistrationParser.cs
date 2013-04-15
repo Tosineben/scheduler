@@ -11,5 +11,6 @@ namespace Scheduler
         string GetInitUrl(string callNumber);
         Tuple<string, NameValueCollection> GetAddRequest(string html);
         Response ParseResponse(string html, string username, string password);
+        ResponseType ParseAddRequestResponse(string html);
     }
 }

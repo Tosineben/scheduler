@@ -33,5 +33,6 @@ namespace Scheduler
         Blocked,
         Open,
         Registered,
+        NoRegistrationAppt,
     }
 }

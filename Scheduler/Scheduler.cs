@@ -90,7 +90,16 @@ namespace Scheduler
             var urlAndData = _parser.GetAddRequest(html);
             var respBytes = _wc.UploadValues(urlAndData.Item1, urlAndData.Item2);
             var resp = Encoding.UTF8.GetString(respBytes);
-            resp.Dump("Response after submitting add request");
+            var parsedResult = _parser.ParseAddRequestResponse(resp);
+
+            if (parsedResult == ResponseType.NoRegistrationAppt)
+            {
+                "You are not allowed to register at this time.".Dump();
+            }
+            else if (parsedResult == ResponseType.Registered)
+            {
+                "Successfully registered!".Dump();
+            }
         }
     }
 }
