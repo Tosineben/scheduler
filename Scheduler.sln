@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scheduler", "Scheduler\Scheduler.csproj", "{A541CC35-7B9D-4F60-87A4-303DC6AA6696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DegreeAuditReport", "DegreeAuditReport\DegreeAuditReport.csproj", "{C4DD2F54-EB8B-4198-94F1-A0D6DE6B8CB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{E9DE622F-4B25-471F-9517-84A0132C509C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumbiaSchedule", "ColumbiaSchedule\ColumbiaSchedule.csproj", "{01AD141F-86AB-4C4F-9DC0-64C3D3BA2FFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{A541CC35-7B9D-4F60-87A4-303DC6AA6696}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A541CC35-7B9D-4F60-87A4-303DC6AA6696}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A541CC35-7B9D-4F60-87A4-303DC6AA6696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DD2F54-EB8B-4198-94F1-A0D6DE6B8CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DD2F54-EB8B-4198-94F1-A0D6DE6B8CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DD2F54-EB8B-4198-94F1-A0D6DE6B8CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DD2F54-EB8B-4198-94F1-A0D6DE6B8CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9DE622F-4B25-471F-9517-84A0132C509C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DE622F-4B25-471F-9517-84A0132C509C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DE622F-4B25-471F-9517-84A0132C509C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DE622F-4B25-471F-9517-84A0132C509C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AD141F-86AB-4C4F-9DC0-64C3D3BA2FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AD141F-86AB-4C4F-9DC0-64C3D3BA2FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AD141F-86AB-4C4F-9DC0-64C3D3BA2FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AD141F-86AB-4C4F-9DC0-64C3D3BA2FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Columbia Exam Schedule</title>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+        
+            </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+        <div class="container">
+            <noscript>
+                <div class="alert">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Warning!</strong> Please enable JavaScript in your browser!
+                </div>
+            </noscript>
+
+            <div class="row">
+                <div id="content" class="col-lg-10">
+                    <div>
+                        <div class="jumbotron">
+                            <div class="container">
+                                <h1>Your Exam Schedule!</h1>
+                                <p id="exam-schedule"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-lg-offset-1">
+                            <div class="step step1">
+                                <h2>Step 1</h2>
+                                <h4>Open <a href="https://ssol.columbia.edu" target="_blank">SSOL</a> and copy your schedule:</h4>
+                                <img src="http://liontextbooks.com/img/select/4/select.gif" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="step step2">
+                                <h2>Step 2</h2>
+                                <h4>Paste your schedule into this box:</h4>
+                                <textarea id="paste" placeholder="Paste here!" cols="30" rows="1"></textarea>
+                                <div style="display: none;">
+                                    <p>Oops, it looks like something went wrong with your paste.  Make sure you're pasting the schedule from the correct term!</p>
+                                    <button class="btn btn-danger"><i class="icon-remove-sign icon-white"></i> Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <footer id="footer">
+                        Footer!
+                    </footer>
+                </div>
+            </div>
+        </div>
+    
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+            var adq = adq || {};
+            adq.examSchedule = {
+                M: [
+                    { classTime: '9:00', examDate: '12/16/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/16/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '2:10', examDate: '12/16/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/16/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/16/2013', examStart: '19:10', examEnd: '22:00' },
+                    { classTime: '7:10', examDate: '12/16/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                T: [
+                    { classTime: '9:00', examDate: '12/17/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/17/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '2:10', examDate: '12/17/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/17/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/17/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                W: [
+                    { classTime: '9:00', examDate: '12/18/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/18/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '1:00', examDate: '12/18/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '2:10', examDate: '12/18/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/18/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/18/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                R: [
+                    { classTime: '9:00', examDate: '12/19/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/19/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '2:10', examDate: '12/19/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/19/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/19/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                F: [
+                    { classTime: '9:00', examDate: '12/13/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/13/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '2:10', examDate: '12/13/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/13/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/13/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                MW: [
+                    { classTime: '8:40', examDate: '12/18/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '10:10', examDate: '12/16/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/16/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:40', examDate: '12/13/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '1:10', examDate: '12/16/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '2:40', examDate: '12/18/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '4:10', examDate: '12/16/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '5:40', examDate: '12/18/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/16/2013', examStart: '19:10', examEnd: '22:00' },
+                    { classTime: '7:40', examDate: '12/18/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                TR: [
+                    { classTime: '8:40', examDate: '12/19/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '10:10', examDate: '12/17/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '12:00', examDate: '12/17/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '1:10', examDate: '12/17/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '2:40', examDate: '12/19/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '11:40', examDate: '12/19/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '4:10', examDate: '12/17/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '5:40', examDate: '12/19/2013', examStart: '16:10', examEnd: '19:00' },
+                    { classTime: '6:10', examDate: '12/17/2013', examStart: '19:10', examEnd: '22:00' },
+                    { classTime: '7:40', examDate: '12/19/2013', examStart: '19:10', examEnd: '22:00' }
+                ],
+                MWF: [
+                    { classTime: '9:00', examDate: '12/13/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '10:00', examDate: '12/18/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '11:00', examDate: '12/16/2013', examStart: '9:00', examEnd: '12:00' },
+                    { classTime: '12:00', examDate: '12/13/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '1:10', examDate: '12/16/2013', examStart: '13:10', examEnd: '16:00' },
+                    { classTime: '2:10', examDate: '12/18/2013', examStart: '13:10', examEnd: '16:00' }
+                ],
+                MTWRF: [
+                    { classTime: '9:00', examDate: '12/13/2013', examStart: '9:00', examEnd: '12:00' }
+                ]
+            };
+
+            adq.examExceptions = {
+                'BIOL C2005': { examDate: '12/17/2013', examStart: '16:10', examEnd: '19:00' },
+                'BIOL F2401': { examDate: '12/17/2013', examStart: '16:10', examEnd: '19:00' },
+                'CHNS C1101': { examDate: '12/16/2013', examStart: '9:00', examEnd: '21:00' },
+            };
+
+            function getClasses(schedule) {
+                var classes = [];
+                var lines = schedule.split('\n');
+                var startIndex = 0;
+                var i;
+                for (i = 0; i < lines.length; i++) {
+                    if (lines[i].indexOf('Class') == 0) {
+                        startIndex = i + 1;
+                        break;
+                    }
+                }
+                for (i = startIndex; i < lines.length - 3; i += 3) {
+                    var classLine = lines[i];
+                    var className = classLine.substring(0, classLine.indexOf(' sec ')).trim();
+                    i += 3; // skip name and credits
+                    var days = '';
+                    var time = '';
+                    var timeLine = lines[i];
+                    var timeLineParts = timeLine.split('\t');
+                    if (timeLineParts.length > 2) {
+                        var dayParts = timeLineParts[1].split(' ');
+                        for (var j = 0; j < dayParts.length; j++) {
+                            var part = dayParts[j];
+                            if (part == 'Mo') days += 'M';
+                            else if (part == 'Tu') days += 'T';
+                            else if (part == 'We') days += 'W';
+                            else if (part == 'Th') days += 'R';
+                            else if (part == 'Fr') days += 'F';
+                        }
+                        time = timeLineParts[2].split('m-')[0];
+                        time = time.substring(0, time.length - 1);
+                    }
+                    classes.push({ className: className, time: time, days: days });
+                }
+
+                return classes;
+            }
+
+            function getExamTimes(classes) {
+                var exams = {};
+                for (var i = 0; i < classes.length; i++) {
+                    var theClass = classes[i];
+                    var exam = null;
+                    var daySchedule = adq.examSchedule[theClass.days];
+                    var exception = adq.examExceptions[theClass.className];
+                    if (exception) {
+                        exam = exception;
+                    }
+                    else if (daySchedule) {
+                        for (var j = 0; j < daySchedule.length; j++) {
+                            if (daySchedule[j].classTime == theClass.time) {
+                                exam = daySchedule[i];
+                            }
+                        }
+                    }
+                    if (exam) {
+                        exams[theClass.className] = {
+                            start: new Date(Date.parse(exam.examDate + ' ' + exam.examStart)),
+                            end: new Date(Date.parse(exam.examDate + ' ' + exam.examEnd)),
+                        };
+                    } 
+                    else {
+                        exams[theClass.className] = { start: null, end: null };
+                    }
+                }
+                return exams;
+            }
+
+            $(function() {
+
+                $('#paste').bind('input propertychange', function() {
+                    var newValue = this.value;
+
+                    if (!newValue.length) {
+                        return;
+                    }
+
+                    var classes = getClasses(newValue);
+                    var exams = getExamTimes(classes);
+
+                    $('#exam-schedule').html(JSON.stringify(exams));
+
+                });
+
+            });
+        
+        </script>    
+    </body>
+</html>

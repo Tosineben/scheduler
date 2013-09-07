@@ -18,6 +18,6 @@ namespace Scheduler
         public const string PassFailResponse = "N"; //taking class for credit, not pass fail
         public const string RootUrlFmt = "https://ssol.columbia.edu{0}?";
         public const string RandomInitSession = "60gyrn1NvIBN8dtDJfB7rx";
-        public const string InitParamsFmt = "p_r_id=V8RgGDrj9CkrBe2agfy7fh&p_t_id=1&tran%5B1%5D_entry=student&tran%5B1%5D_tran_name=sregs&tran%5B1%5D_ss={0}&tran%5B1%5D_act=Search+Class";
+        public const string InitParamsFmt = "p_r_id=V8RgGDrj9CkrBe2agfy7fh&p_t_id=1&tran[1]_entry=student&tran[1]_tran_name=sregs&tran[1]_ss={0}&tran[1]_act=Search+Class";
     }
 }
