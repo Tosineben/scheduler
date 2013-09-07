@@ -68,8 +68,10 @@
                     <div>
                         <div class="jumbotron">
                             <div class="container">
-                                <h1>Your Exam Schedule!</h1>
-                                <p id="exam-schedule"></p>
+                                <h1>Your Exam Schedule</h1>
+                                <p>
+                                    <pre id="exam-schedule" style="display:none;"></pre>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -97,8 +99,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
+                    <hr/>
                     <footer id="footer">
-                        Footer!
+                        Created by <a href="https://github.com/aldenquimby" target="_blank">Alden Quimby</a>
                     </footer>
                 </div>
             </div>
@@ -106,6 +109,7 @@
     
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="http://rawgithub.com/timrwood/moment/2.1.0/min/moment.min.js"></script>
         <script type="text/javascript">
 
             var adq = adq || {};
@@ -247,8 +251,8 @@
                     }
                     if (exam) {
                         exams[theClass.className] = {
-                            start: new Date(Date.parse(exam.examDate + ' ' + exam.examStart)),
-                            end: new Date(Date.parse(exam.examDate + ' ' + exam.examEnd)),
+                            start: moment(exam.examDate + ' ' + exam.examStart).format('dddd, MMMM DD, h:mm A'),
+                            end: moment(exam.examDate + ' ' + exam.examEnd).format('dddd, MMMM DD, h:mm A')
                         };
                     } 
                     else {
@@ -270,7 +274,8 @@
                     var classes = getClasses(newValue);
                     var exams = getExamTimes(classes);
 
-                    $('#exam-schedule').html(JSON.stringify(exams));
+                    $('#exam-schedule').html(JSON.stringify(exams, null, 2));
+                    $('#exam-schedule').show();
 
                 });
 
